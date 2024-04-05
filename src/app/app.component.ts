@@ -1,12 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HeaderComponent } from './header/header.component';
+import { CardComponent } from './card/card.component';
 
-
-interface Data {
-  incomes: number;
-  expenses: number;
-  profit: number;
-}
 interface PromptResponse {
   message: string;
 }
@@ -15,37 +11,29 @@ interface PromptResponse {
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  imports: [
+    HeaderComponent,
+    CardComponent
+  ],
 })
 export class AppComponent implements OnInit {
   title = 'frontend_GeminiReports';
-  data: Data = { expenses: 0, incomes: 0, profit: 0 }; // Initialize data with undefined
-  promptMessage: PromptResponse = {message: ''};
+  promptMessage: PromptResponse = { message: '' };
   constructor(private http: HttpClient) {}
-  
 
   ngOnInit() {
-    
-    this.getData().subscribe(data => {
-      this.data = data; // Assign the response to the data variable
-    });
-    this.getMessage().subscribe(promptMessage => {
+    this.getMessage().subscribe((promptMessage) => {
       this.promptMessage = promptMessage; // Assign the response to the data variable
-      console.log(promptMessage.message)
-
     });
   }
-  
-  getData() {
-    return this.http.get<Data>('http://192.168.0.12:8000/api/profit/', {headers}); // Replace with your actual API endpoint
-  }
-  getMessage() {
-    return this.http.get<PromptResponse>('http://192.168.0.12:8000/gemini/', {headers}); // Replace with your actual API endpoint
-  
-    }
 
+  getMessage() {
+    return this.http.get<PromptResponse>('http://192.168.0.12:8000/gemini/', {
+      headers,
+    }); // Replace with your actual API endpoint
+  }
 }
-const headers= new HttpHeaders()
+const headers = new HttpHeaders()
   .set('content-type', 'application/json')
   .set('Access-Control-Allow-Origin', '*');
-

@@ -1,0 +1,28 @@
+/* Header Style Update */
+.header {
+/* Semi-transparent pink background */
+  padding: 0.5rem 1rem; /* Adjust padding */
+  border-radius: 5px; /* Rounded corners */
+  align-items: center; /* Vertical alignment */
+  color: #00fff0; /* Darker neon aqua text */
+}
+
+.menu-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+}
+
+.menu-button i {
+  color: #00fff0; /* Darker neon aqua icon color */
+}
+.header-icon {
+  width: 30px; /* Adjust width as needed */
+  height: 30px; /* Adjust height as needed */
+  margin-right: 10px; /* Add margin for spacing */
+  margin-left: 10px; /* Add margin for spacing */
+  padding-top: -10px;
+  margin-top: -10px;
+}

@@ -1,0 +1,44 @@
+.bg-glass {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Blur effect */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+}
+
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light white border */
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly more opaque white */
+}
+.finanzas {
+  background-color: rgba(255, 255, 255, 0); /* Semi-transparent white */
+  border: none;
+}
+.c-details span,
+.text1,
+.icon,
+span {
+  color: #00fff0; /* Darker neon aqua text */
+}
+
+.badge span {
+  background-color: #ffffff; /* Light beige background */
+  width: 60px;
+  height: 25px;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  display: flex;
+  color: #b30505; /* Brownish orange text */
+  justify-content: center;
+  align-items: center;
+}
+
+.progress {
+  height: 10px;
+  border-radius: 10px;
+  background-color: #a5aec0; /* Teal progress bar */
+}
+
+.progress div {
+  background-color: #df0808; /* Inherit color from progress bar */
+}
