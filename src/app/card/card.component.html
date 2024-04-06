@@ -1,81 +1,10 @@
-<div class="card finanzas bg-glass container">
-  <div class="row justify-content-between">
-    <div class="col-4 mt-3">
-      <div class="badge"><span>Finanzas</span></div>
-    </div>
-    <div class="col-4 c-details rounded-end text1">
-      <div class="row">
-        <div class="col-2 mt-2">
-          <i class="bx bx-trending-up"></i>
-        </div>
-        <div class="col-10">
-          <h6>Ingresos</h6>
-        </div>
-      </div>
-
-      <span>
-        $
-        {{
-          data.incomes.toLocaleString("es-CL", {
-            minimumFractionDigits: 0
-          })
-        }}</span
-      >
-    </div>
-
-    <div class="col-4 c-details rounded-start text1">
-      <div class="row">
-        <div class="col-2 mt-2">
-          <i class="bx bx-trending-up"></i>
-        </div>
-        <div class="col-10">
-          <h6>Ingresos</h6>
-        </div>
-      </div>
-      <span
-        >$
-        {{
-          data.expenses.toLocaleString("es-CL", {
-            minimumFractionDigits: 0
-          })
-        }}</span
-      >
-    </div>
+<main class="container mt-1">
+  <div class="col-12 mt-4">
+    <h1 class="titulo">Reporte IA</h1>
   </div>
-
-  <div class="mt-2 row">
-    <h3 class="heading text1">Margen : $ {{(data.profit).toLocaleString("es-CL", {
-      minimumFractionDigits: 0
-    })}}</h3>
-    <div class="mt-2">
-      <div class="progress">
-        <div
-          class="progress-bar"
-          role="progressbar"
-          [style.width]="data.ratio * 100 + '%'"
-          attr.aria-valuenow="{{ data.ratio * 100 }}"
-          aria-valuemin="0"
-          aria-valuemax="100"
-        ></div>
-      </div>
-      <div class="mt-2">
-        <span class="text1"
-          >$
-          {{
-            (data.expenses * -1).toLocaleString("es-CL", {
-              minimumFractionDigits: 0
-            })
-          }}
-          Gastados
-          <span class="text2"
-            >de ${{
-              data.incomes.toLocaleString("es-CL", {
-                minimumFractionDigits: 0
-              })
-            }}</span
-          ></span
-        >
-      </div>
+  <section class="mt-3 message-container">
+    <div class="alert alert-secondary text-center bg-glass text1">
+      <div [innerHTML]="promptMessage.message"></div>
     </div>
-  </div>
-</div>
+  </section>
+</main>
