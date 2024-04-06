@@ -21,8 +21,7 @@
 }
 .c-details span,
 .text1,
-.icon,
-span {
+.icon {
   color: #00fff0; /* Darker neon aqua text */
 }
 
@@ -60,4 +59,69 @@ span {
 }
 .main-finances{
   min-height: 15vh
+}
+
+.btn-reporte {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+.circulo-progreso-borde {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  clip-path: polygon(0 0, 50% 50%, 100% 0);
+  animation: girar 2s linear infinite;
+}
+
+.text-reporte {
+  top: 0;
+  left: 0;
+  z-index: 2;
+  line-height: 100px; 
+}
+
+.circulo-progreso {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #666;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  animation: girar 2s linear infinite;
+}
+
+.circulo-progreso-interior {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: #999;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
