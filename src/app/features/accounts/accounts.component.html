@@ -1,0 +1,23 @@
+<section class="row">
+    <div class="col-12 mt-4">
+      <h1 class="titulo-finanza">Cuentas</h1>
+    </div>
+    <div class="col-6 mt-3" *ngFor="let account of accounts">
+      <a class="a" href="transacciones/cuentas/{{ account.name }}"
+        ><div
+          class="card main-finances finanzas bg-glass text-white container card-account"
+        >
+          <i class="bx bx-credit-card mt-2"></i>
+          <strong>{{ account.name }}</strong>
+          <p class="mt-2">
+            Total:
+            {{
+              account.total_transactions.toLocaleString("es-CL", {
+                minimumFractionDigits: 0
+              })
+            }}
+          </p>
+        </div></a
+      >
+    </div>
+  </section>

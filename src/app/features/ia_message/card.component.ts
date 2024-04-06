@@ -1,15 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
-
-interface PromptResponse {
-  message: string;
-}
+import { PromptResponse } from '../../models/promtpResponse';
+import { IaContainerComponent } from './ia_container/ia_container.component';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [],
+  imports: [IaContainerComponent],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css',
 })

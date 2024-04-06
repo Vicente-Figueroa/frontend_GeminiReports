@@ -1,0 +1,13 @@
+.titulo {
+  text-align: center;
+  color: white;
+}
+
+
+.c-details span,
+.text1,
+.icon,
+span {
+  color: #00fff0; /* Darker neon aqua text */
+}
+

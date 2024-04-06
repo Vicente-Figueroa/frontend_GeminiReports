@@ -1,14 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-
-interface Transaction {
-  id: number;
-  date: string;
-  amount: number;
-  type: string;
-  account: string;
-}
+import { Transaction } from '../../models/categories';
 
 const headers = new HttpHeaders()
   .set('content-type', 'application/json')
@@ -31,7 +24,7 @@ export class TransactionsComponent implements OnInit {
     const lastColonIndex = this.url.lastIndexOf('/');
     const substringAfterColon =
       lastColonIndex !== -1 ? this.url.substring(lastColonIndex + 1) : '';
-    const hasAccounts = this.url.includes('accounts');
+    const hasAccounts = this.url.includes('cuentas');
     if (hasAccounts) {
      const endpoint = '?account__name=' + substringAfterColon;
 
@@ -39,7 +32,8 @@ export class TransactionsComponent implements OnInit {
         this.data = data.results; // Assign the response to the data variable
       });
     } else {
-      const endpoint = '?type=' + substringAfterColon;
+      
+      const endpoint = '?type=' + capitalizeString(substringAfterColon);
 
       this.getData(endpoint).subscribe((data) => {
         this.data = data.results; // Assign the response to the data variable
@@ -55,4 +49,7 @@ export class TransactionsComponent implements OnInit {
       }
     ); // Replace with your actual API endpoint
   }
+}
+function capitalizeString(str: string): string {
+  return str.charAt(0).toUpperCase() + str.slice(1);
 }

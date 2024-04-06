@@ -13,7 +13,7 @@
             </a>
           </div>
           <div class="col-4 c-details rounded-end text1">
-            <a class="a" href="transacciones/Ingresos">
+            <a class="a" href="transacciones/ingresos">
               <div class="row">
                 <div class="col-2 mt-2">
                   <i class="bx bx-trending-up"></i>
@@ -35,7 +35,7 @@
           </div>
 
           <div class="col-4 c-details rounded-start text1">
-            <a class="a" href="transacciones/Gastos">
+            <a class="a" href="transacciones/gastos">
               <div class="row">
                 <div class="col-2 mt-2">
                   <i class="bx bx-trending-down"></i>
@@ -77,7 +77,7 @@
               ></div>
             </div>
             <div class="mt-2">
-              <span class="text1"
+              <a href="/categorias" ><span class="text1"
                 >$
                 {{
                   (data.expenses * -1).toLocaleString("es-CL", {
@@ -92,34 +92,13 @@
                     })
                   }}</span
                 ></span
-              >
+              ></a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="row">
-    <div class="col-12 mt-4">
-      <h1 class="titulo-finanza">Cuentas</h1>
-    </div>
-    <div class="col-6 mt-3" *ngFor="let account of accounts">
-      <a class="a" href="transacciones/accounts/{{ account.name }}"
-        ><div
-          class="card main-finances finanzas bg-glass text-white container card-account"
-        >
-          <i class="bx bx-credit-card mt-2"></i>
-          <strong>{{ account.name }}</strong>
-          <p class="mt-2">
-            Total:
-            {{
-              account.total_transactions.toLocaleString("es-CL", {
-                minimumFractionDigits: 0
-              })
-            }}
-          </p>
-        </div></a
-      >
-    </div>
-  </section>
+  <app-accounts></app-accounts>
+
 </main>

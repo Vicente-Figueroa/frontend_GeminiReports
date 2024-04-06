@@ -67,3 +67,6 @@ body {
   color: #ffffff; /* Light grayish blue color (same as your .text2) */
 
 }
+a {
+  all: unset;
+}

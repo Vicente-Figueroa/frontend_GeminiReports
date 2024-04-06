@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { HeaderComponent } from './header/header.component';
-import { CardComponent } from './card/card.component';
+import { HeaderComponent } from './main_components/header/header.component';
+import { CardComponent } from './features/ia_message/card.component';
 import { RouterOutlet } from '@angular/router';
 
 

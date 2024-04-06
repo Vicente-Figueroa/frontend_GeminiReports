@@ -1,0 +1,15 @@
+<div class="container">
+    <h1 class="text-center titulo">Categorias</h1>
+    <div class="row">
+      <div class="col-6 mb-4" *ngFor="let category of categories">
+        <div class="card bg-glass main-card">
+          <div class="card-body">
+            <a href="transacciones/categorias/{{ category.envelope_id }}" >
+            <h6 class="card-title text2">{{ category.envelope_id}}</h6>
+            <p class="card-text text2">Total: {{ category.total }}</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
