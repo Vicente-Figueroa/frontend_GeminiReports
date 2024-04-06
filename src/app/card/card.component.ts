@@ -24,7 +24,7 @@ export class CardComponent implements OnInit {
   promptMessage: PromptResponse = { message: '' };
 
   getMessage() {
-    return this.http.get<PromptResponse>('http://192.168.0.12:8000/gemini/', {
+    return this.http.get<PromptResponse>('http://192.168.0.12:8000/gemini/last_month/', {
       headers,
     }); // Replace with your actual API endpoint
   }

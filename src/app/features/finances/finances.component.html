@@ -1,21 +1,28 @@
 <main class="container view70percent mt-1">
-
   <section class="row">
     <div class="col-12">
       <div class="card finanzas bg-glass container">
         <div class="row justify-content-between">
           <div class="col-4 mt-3">
-            <div class="badge"><span><a href="reporte" style="text-decoration: none">Reporte</a></span></div>
+            <div class="badge">
+              <span
+                ><a href="reporte" style="text-decoration: none"
+                  >Reporte</a
+                ></span
+              >
+            </div>
           </div>
           <div class="col-4 c-details rounded-end text1">
-            <div class="row">
-              <div class="col-2 mt-2">
-                <i class="bx bx-trending-up"></i>
-              </div>
-              <div class="col-10">
-                <h6>Ingresos</h6>
-              </div>
-            </div>
+            <a class="a" href="transacciones/Ingresos">
+              <div class="row">
+                <div class="col-2 mt-2">
+                  <i class="bx bx-trending-up"></i>
+                </div>
+                <div class="col-10">
+                  <h6>Ingresos</h6>
+                </div>
+              </div></a
+            >
 
             <span>
               $
@@ -28,14 +35,16 @@
           </div>
 
           <div class="col-4 c-details rounded-start text1">
-            <div class="row">
-              <div class="col-2 mt-2">
-                <i class="bx bx-trending-up"></i>
-              </div>
-              <div class="col-10">
-                <h6>Gastos</h6>
-              </div>
-            </div>
+            <a class="a" href="transacciones/Gastos">
+              <div class="row">
+                <div class="col-2 mt-2">
+                  <i class="bx bx-trending-down"></i>
+                </div>
+                <div class="col-10">
+                  <h6>Gastos</h6>
+                </div>
+              </div></a
+            >
             <span
               >$
               {{
@@ -94,14 +103,23 @@
     <div class="col-12 mt-4">
       <h1 class="titulo-finanza">Cuentas</h1>
     </div>
-    <div class="col-6 main-finances mt-3" *ngFor="let account of accounts">
-      <div class="card finanzas  bg-glass  text-white container card-account">
-        <i class="bx bx-credit-card mt-2"></i>
-        <strong>{{account.name}}</strong>
-        <p class="mt-2">Total: {{account.total_transactions.toLocaleString("es-CL", {
-          minimumFractionDigits: 0
-        })}}</p>
-      </div>
+    <div class="col-6 mt-3" *ngFor="let account of accounts">
+      <a class="a" href="transacciones/accounts/{{ account.name }}"
+        ><div
+          class="card main-finances finanzas bg-glass text-white container card-account"
+        >
+          <i class="bx bx-credit-card mt-2"></i>
+          <strong>{{ account.name }}</strong>
+          <p class="mt-2">
+            Total:
+            {{
+              account.total_transactions.toLocaleString("es-CL", {
+                minimumFractionDigits: 0
+              })
+            }}
+          </p>
+        </div></a
+      >
     </div>
   </section>
 </main>
