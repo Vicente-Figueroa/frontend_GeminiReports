@@ -1,6 +1,5 @@
 table {
   width: 70vw;
-  border-collapse: collapse;
   
 }
 
@@ -11,6 +10,6 @@ table {
 }
 @media (max-width: 768px) {
   .table {
-    font-size: 0.7rem; /* Adjust font size for better readability */
+    font-size: 0.8rem; /* Adjust font size for better readability */
   }
 }

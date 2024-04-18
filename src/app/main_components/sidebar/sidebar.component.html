@@ -1,0 +1,18 @@
+<div class="sidebar" [class.open]="isOpen">
+    <div class="sidebar-header">
+      <a href="#" class="sidebar-logo">
+        <span [class.visible]="isOpen">Gemini</span>
+      </a>
+      <button class="btn sidebar-toggle" [class.open]="!isOpen" (click)="toggleSidebar()">
+        <i class="bx bx-menu"></i>
+      </button>
+    </div>
+    <div class="sidebar-menu">
+      <ul>
+        <li><a href="/"><i class='bx bx-home'></i> Inicio</a></li>
+        <li><a href="cuentas"><i class='bx bx-user'></i> Cuentas</a></li>
+        <li><a href="transacciones"><i class='bx bx-book-alt'></i> Transacciones</a></li>
+        <li><a href="categorias"><i class='bx bx-envelope'></i> Categorias</a></li>
+      </ul>
+    </div>
+  </div>

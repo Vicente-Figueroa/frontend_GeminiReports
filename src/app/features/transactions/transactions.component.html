@@ -3,7 +3,7 @@
     <div class="col-12">
       <h1 class="titulo-transacciones">Transacciones</h1>
     </div>
-    <div class="col-12">
+    <div class="col-12 .table">
       <table class="table table-striped table-hover table-responsive table-sm "
     >
         <thead>
@@ -19,8 +19,8 @@
         <tbody>
           <tr *ngFor="let transaccion of data">
             <td>{{ transaccion.account }}</td>
-            <td>{{ transaccion.type }}</td>
-            <td>$ {{ transaccion.amount }}</td>
+            <td>{{ transaccion.type |slice:0:6  }}</td>
+            <td>{{'$'+ transaccion.amount }}</td>
             <td>{{ transaccion.envelope_id }}</td>
             <td>{{ transaccion.date | date: 'dd/MM/yyyy'}}</td>
             <td>

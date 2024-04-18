@@ -5,6 +5,7 @@
   border-radius: 5px; /* Rounded corners */
   align-items: center; /* Vertical alignment */
   color: #00fff0; /* Darker neon aqua text */
+margin-left: 20vw;
 }
 
 .menu-button {
@@ -22,7 +23,7 @@
   width: 30px; /* Adjust width as needed */
   height: 30px; /* Adjust height as needed */
   margin-right: 10px; /* Add margin for spacing */
-  margin-left: 10px; /* Add margin for spacing */
+  margin-left: 20px; /* Add margin for spacing */
   padding-top: -10px;
   margin-top: -10px;
 }

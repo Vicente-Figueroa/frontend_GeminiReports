@@ -32,8 +32,14 @@ export class TransactionsComponent implements OnInit {
         this.data = data.results; // Assign the response to the data variable
       });
     } else {
+      var endpoint = '';
+
       
-      const endpoint = '?type=' + capitalizeString(substringAfterColon);
+      if(substringAfterColon != 'transacciones'){
+        endpoint = '?type=' + capitalizeString(substringAfterColon);
+        console.log(substringAfterColon)
+
+      }
 
       this.getData(endpoint).subscribe((data) => {
         this.data = data.results; // Assign the response to the data variable
@@ -49,6 +55,8 @@ export class TransactionsComponent implements OnInit {
       }
     ); // Replace with your actual API endpoint
   }
+
+  
 }
 function capitalizeString(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1);

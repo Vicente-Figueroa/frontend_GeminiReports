@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { HeaderComponent } from './main_components/header/header.component';
 import { CardComponent } from './features/ia_message/card.component';
 import { RouterOutlet } from '@angular/router';
+import { SidebarComponent } from './main_components/sidebar/sidebar.component';
 
 
 
@@ -11,7 +12,7 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  imports: [HeaderComponent,RouterOutlet],
+  imports: [HeaderComponent,RouterOutlet,SidebarComponent],
 })
 export class AppComponent {
   title = 'frontend_GeminiReports';

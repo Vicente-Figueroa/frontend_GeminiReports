@@ -10,6 +10,7 @@ export const routes: Routes = [
 // Reglas, siempre con minusculas y separado por ->"_" underscore 
 {path: 'transacciones/ingresos', component: TransactionsComponent},
 {path: 'transacciones/gastos', component: TransactionsComponent},
+{path: 'transacciones', component: TransactionsComponent},
 {path: 'cuentas', component: AccountsComponent},
 {path: 'transacciones/cuentas/:cuenta', component: TransactionsComponent},
 {path: 'transacciones/categorias/:categoria', component: TransactionsComponent},
