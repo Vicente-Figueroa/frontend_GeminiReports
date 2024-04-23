@@ -1,29 +1,43 @@
-/* Header Style Update */
 .header {
-/* Semi-transparent pink background */
-  padding: 0.5rem 1rem; /* Adjust padding */
-  border-radius: 5px; /* Rounded corners */
-  align-items: center; /* Vertical alignment */
-  color: #00fff0; /* Darker neon aqua text */
-margin-left: 20vw;
+  background-color: #eeb75a; /* fondo amarillo claro */
+  padding: 1rem;
+  display: flex;
+  justify-content: center; /* centrar contenido horizontalmente */
+  align-items: center; /* centrar contenido verticalmente */
 }
 
-.menu-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  padding: 0;
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* separar elementos horizontalmente */
 }
 
-.menu-button i {
-  color: #00fff0; /* Darker neon aqua icon color */
+.logo-link {
+  text-decoration: none;
+  color: #333; /* texto oscuro */
 }
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 1rem; /* agregar espacio entre texto e imagen */
+}
+
 .header-icon {
-  width: 30px; /* Adjust width as needed */
-  height: 30px; /* Adjust height as needed */
-  margin-right: 10px; /* Add margin for spacing */
-  margin-left: 20px; /* Add margin for spacing */
-  padding-top: -10px;
-  margin-top: -10px;
+  width: 40px;
+  height: 40px;
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+  .header {
+    padding: 0.5rem;
+  }
+  .logo-text {
+    font-size: 1.2rem;
+  }
+  .header-icon {
+    width: 30px;
+    height: 30px;
+  }
 }

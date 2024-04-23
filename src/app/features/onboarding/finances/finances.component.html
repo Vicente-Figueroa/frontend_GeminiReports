@@ -1,0 +1,58 @@
+<div class="row">
+  <div class="col-4">
+    <app-profit></app-profit>
+  </div>
+  <div class="col-8">
+<app-progress></app-progress>
+  </div>
+</div>
+      <!-- Tarjeta de finanzas -->
+      <div class="row justify-content-between">
+        <!-- Fila para los elementos principales -->
+
+        <div class="col-4 c-details rounded-end text1">
+          <!-- Columna para mostrar Ingresos -->
+          <a class="a" href="transacciones/ingresos">
+            <div class="row">
+              <div class="col-2 mt-2">
+                <i class="bx bx-trending-up"></i>
+              </div>
+              <div class="col-10">
+                <h6>Ingresos</h6>
+              </div>
+            </div>
+          </a>
+          <!-- Mostrar cantidad de ingresos -->
+          <span>
+            $
+            {{
+              data.incomes.toLocaleString("es-CL", {
+                minimumFractionDigits: 0
+              })
+            }}
+          </span>
+        </div>
+
+        <div class="col-4 c-details rounded-start text1">
+          <!-- Columna para mostrar Gastos -->
+          <a class="a" href="transacciones/gastos">
+            <div class="row">
+              <div class="col-2 mt-2">
+                <i class="bx bx-trending-down"></i>
+              </div>
+              <div class="col-10">
+                <h6>Gastos</h6>
+              </div>
+            </div>
+          </a>
+          <!-- Mostrar cantidad de gastos -->
+          <span>
+            $
+            {{
+              data.expenses.toLocaleString("es-CL", {
+                minimumFractionDigits: 0
+              })
+            }}
+          </span>
+        </div>
+      </div>

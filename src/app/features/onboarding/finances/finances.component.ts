@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Account } from '../../models/accounts';
-import { Profit } from '../../models/profit';
-import { AccountsComponent } from '../accounts/accounts.component';
+import { Profit } from '../../../models/profit';
+import { ProfitComponent } from './profit/profit.component';
+import { ProgressComponent } from './progress/progress.component';
 
 const headers = new HttpHeaders()
   .set('content-type', 'application/json')
@@ -12,7 +12,7 @@ const headers = new HttpHeaders()
 @Component({
   selector: 'app-finances',
   standalone: true,
-  imports: [CommonModule, AccountsComponent],
+  imports: [CommonModule, ProfitComponent, ProgressComponent],
   templateUrl: './finances.component.html',
   styleUrl: './finances.component.css',
 })

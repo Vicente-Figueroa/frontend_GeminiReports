@@ -4,7 +4,7 @@ import { AppComponent } from './app/app.component';
 import { HeaderComponent } from './app/main_components/header/header.component';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
-import { FinancesComponent } from './app/features/finances/finances.component';
+import { FinancesComponent } from './app/features/onboarding/finances/finances.component';
 import { CategoriesComponent } from './app/features/categories/categories.component';
 
 

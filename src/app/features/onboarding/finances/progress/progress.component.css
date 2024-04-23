@@ -1,0 +1,13 @@
+.bg-glass{
+    background-color: #273460;
+    font-size: 14px;
+    color: #fff;
+    justify-content: center;
+    height: 16vh;
+    text-align: center;
+    backdrop-filter: blur(5px); /* aplicar blur de 10px */
+    -webkit-backdrop-filter: blur(5px); /* soporte para Safari y Chrome */
+    border-radius: 5px; /* agregar un borde redondeado */
+    padding: 5px; /* agregar un padding para que se vea mejor */
+    margin: 5px; /* agregar un padding para que se vea mejor */
+}

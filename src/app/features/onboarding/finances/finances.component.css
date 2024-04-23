@@ -1,0 +1,8 @@
+.container{
+  background-color:#eeb75a;
+  display: flex;
+}
+a{
+  color: #273460;
+  text-decoration:none;
+}
