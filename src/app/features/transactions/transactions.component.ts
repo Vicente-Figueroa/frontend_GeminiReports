@@ -49,7 +49,7 @@ export class TransactionsComponent implements OnInit {
 
   getData(endpoint: string) {
     return this.http.get<any>(
-      'http://192.168.0.12:8000/api/transactions/' + endpoint,
+      'http://192.168.0.4:8000/api/transactions/' + endpoint,
       {
         headers,
       }

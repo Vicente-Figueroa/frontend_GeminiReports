@@ -32,7 +32,7 @@ export class CategoriesComponent implements OnInit {
     });
   }
   getData() {
-    return this.http.get<any>('http://127.0.0.1:8000/api/category/', {
+    return this.http.get<any>('http://192.168.0.4:8000/api/category/', {
       headers,
     }); // Replace with your actual API endpoint
   }

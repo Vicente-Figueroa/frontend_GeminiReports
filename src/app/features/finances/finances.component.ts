@@ -28,7 +28,7 @@ export class FinancesComponent implements OnInit {
   }
 
   getData(url: string) {
-    return this.http.get<any>('http://192.168.0.12:8000/api/' + url + '/', {
+    return this.http.get<any>('http://192.168.0.4:8000/api/' + url + '/', {
       headers,
     }); // Replace with your actual API endpoint
   }
